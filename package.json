@@ -1,0 +1,27 @@
+{
+  "name": "chat-application",
+  "version": "1.0.0",
+  "description": "An information securities university project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arham-mahmood-abbasi/Chat-application.git"
+  },
+  "author": "Arham Mahmood Abbasi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arham-mahmood-abbasi/Chat-application/issues"
+  },
+  "homepage": "https://github.com/arham-mahmood-abbasi/Chat-application#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.3",
+    "nodemon": "^3.1.0"
+  }
+}
