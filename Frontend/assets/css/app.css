@@ -60,6 +60,11 @@ dl {
   background: var(--bg);
 }
 
+
+.tyn-bg-smokeWhite{
+  background-color: whitesmoke;
+}
+
 .tyn-content {
   --aside-bg:var(--bs-white);
   --aside-width:100%;
@@ -523,8 +528,13 @@ dl {
   margin-top: 1.25rem;
 }
 
+.tyn-aside-item.active .tyn-class-media{
+  box-shadow: none;
+  background-color: white;
+}
+
 .tyn-media {
-  --media-bg: var(--bs-white);
+  --media-bg: rgb(246, 246, 246);
   --media-border: var(--bs-white);
   --tyn-size: var(--bs-size-rg);
   --tyn-shape: var(--bs-border-radius);
@@ -537,6 +547,13 @@ dl {
   border-radius: var(--tyn-shape);
   background: var(--media-bg);
 }
+
+.tyn-class-media{
+  --tyn-box-shadow: 0px 0px 1px 1px;
+  box-shadow: var(--tyn-box-shadow);
+}
+
+
 [data-bs-theme=dark] .tyn-media {
   --media-bg: var(--bs-gray-800);
   --media-border: var(--bs-gray-800);
@@ -1677,5 +1694,872 @@ dl {
   --tyn-size: var(--bs-size-4xl);
   --tyn-icon-size: var(--bs-icon-size-4xl);
 }
+
+
+.tyn-class-box{
+  background-color: #fff;
+  border: .0625rem solid #dadce0;
+  border-radius: .5rem;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+[data-bs-theme=dark] .tyn-class-box{
+  background-color: #132036;
+}
+
+.tyn-class-box:hover{
+  border-color: transparent;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.tyn-class-pic{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 4rem;
+}
+
+.tyn-class-pic img{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: -35px;
+  right: 20px;
+}
+
+.tyn-class-head{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem .75rem;
+  position: relative;
+  height: 6.25rem;
+  background-image: url(../../images/v-cover/img_learnlanguage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tyn-class-head .link{
+  color: var(--bs-white);
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tyn-class-head .link:hover,
+.tyn-class-head .link:focus{
+  --blind-color: #fdfdffab;
+  background-color: var(--blind-color);
+  color: var(--hover-color);
+}
+
+.tyn-class-head h2{
+  font-size: 1.25rem;
+  margin: 0;
+  color: var(--bs-white);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+}
+.tyn-class-head h5{
+  font-size: 0.7rem;
+  margin: 0;
+  color: var(--bs-white);
+}
+.tyn-class-head h4{
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  margin-top: 5px;
+  color: var(--bs-white);
+
+}
+
+.tyn-class-bottom{
+  line-height: 0;
+  padding: .25rem;
+  border-top: .0625rem solid rgb(218, 220, 224);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.tyn-class-bottom .workBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+[data-bs-theme=dark] .tyn-class-bottom .workBtn svg{
+  fill: var(--bs-white);
+}
+[data-bs-theme=dark] .tyn-class-bottom .workBtn:hover{
+  background-color:  rgba(0, 0, 0, 0.3);
+}
+
+.tyn-class-bottom .workBtn:hover{
+  background-color: #dadce0;
+}
+
+
+.tyn-user-info{
+  --bottom-border-color: #000;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  border-bottom: 1px solid var(--bottom-border-color);
+  padding-bottom: 1.5rem;
+}
+[data-bs-theme=dark] .tyn-user-info{
+  --bottom-border-color: #fff;
+}
+
+.tyn-user-profileImage img{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+.custom-select {
+  position: relative;
+  width: 400px;
+  max-width: 100%;
+  font-size: 1.15rem;
+  color: #000;
+  margin-top: 2rem;
+}
+
+.select-button {
+  --select-bg-color: #fff;
+  width: 100%;
+  font-size: 1rem;
+  background-color: var(--select-bg-color);
+  padding: 0.675em 1em;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+[data-bs-theme=dark] .select-button{
+  --select-bg-color: rgba(0,0,0,0.2);
+}
+
+
+.selected-value {
+  text-align: left;
+}
+
+.arrow {
+  --arrow-color: #000;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--arrow-color);
+  transition: transform ease-in-out 0.3s;
+}
+[data-bs-theme=dark] .arrow{
+  --arrow-color: #fff;
+}
+
+.select-dropdown {
+  --select-dropdown-bg: #fff;
+  position: absolute;
+  list-style: none;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: var(--select-dropdown-bg);
+  border: 1px solid #caced1;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  transition: 0.5s ease;
+  transform: scaleY(0);
+  opacity: 0;
+  visibility: hidden;
+}
+[data-bs-theme=dark] .select-dropdown{
+  --select-dropdown-bg: rgba(0,0,0,0.4);
+}
+[data-bs-theme=dark] .select-dropdown li label{
+  color: #fff;
+}
+
+.select-dropdown:focus-within {
+  box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
+}
+
+.select-dropdown li {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.select-dropdown li label {
+  width: 100%;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.select-dropdown::-webkit-scrollbar {
+  width: 7px;
+}
+.select-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.select-dropdown::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+.select-dropdown li:hover,
+.select-dropdown input:checked ~ label {
+  background-color: #f2f2f2;
+}
+[data-bs-theme=dark] .select-dropdown li:hover,
+.select-dropdown input:checked ~ label{
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.select-dropdown input:focus ~ label {
+  background-color: #dfdfdf;
+}
+
+.select-dropdown input[type="radio"] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
+/* interactivity */
+
+.custom-select.active .arrow {
+  transform: rotate(180deg);
+}
+
+.custom-select.active .select-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+.tyn-work-title{
+  color: #3c4043;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0;
+}
+[data-bs-theme=dark] .tyn-work-title{
+  color: #e5e5e6;
+}
+
+.tyn-work-time{
+  color:#5f6368;
+  font-size: 12px;
+}
+[data-bs-theme=dark] .tyn-work-time{
+  color: #989898;
+}
+
+.tyn-work-status{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.class-done{
+  --done-color: #3c4043;
+  color: var(--done-color);
+}
+[data-bs-theme=dark] .class-done{
+  --done-color:#fff;
+}
+
+.tyn-workDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 0.0625rem solid var(--aside-item-active-bg);
+  transition: all 0.3s ease-in-out;
+}
+[data-bs-theme=dark] .tyn-workDiv{
+  border-bottom-color: #e1e1e1;
+}
+
+.tyn-workDiv:hover{
+  border-radius: 8px;
+  background-color: var(--aside-item-active-bg);
+  transition: all 0.3s ease-in-out;
+}
+[data-bs-theme=dark] .tyn-workDiv:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+  border-bottom-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.tyn-user-work{
+  padding: 3rem 0px 2rem; 
+}
+
+.class-miss{
+  color: #d50000;
+}
+
+.tyn-people-heading{
+  padding: 1rem 0px;
+  --people-border-bottom-color: rgb(66,133,244);
+  border-bottom: 1px solid var(--people-border-bottom-color);
+  margin-bottom: 10px;
+}
+[data-bs-theme=dark] .tyn-people-heading{
+  --people-border-bottom-color: #fff;
+}
+
+.tyn-teacher-profileImage img,
+.tyn-student-profileImage img{
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.tyn-teacherName,
+.tyn-studentName{
+  font-size: 1rem;
+  margin: 0;
+}
+
+.tyn-teacher-info,
+.tyn-student-info{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  --border-color: rgba(0,0,0,0.4);
+  border-bottom: 0.0625rem solid var(--border-color) ;
+  padding: 0.8rem 0px;
+}
+[data-bs-theme=dark] .tyn-teacher-info,
+.tyn-student-info{
+  --border-color: #b8b8b8;
+}
+
+
+.tyn-class-poster{
+  height: 15rem;
+  background-image: url(../../images/v-cover/img_learnlanguage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  position: relative;
+}
+
+.tyn-class-poster-heading{
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+}
+
+.tyn-class-poster-heading h1{
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 44px;
+  margin: 0;
+  color: #fff;
+}
+
+.tyn-class-poster-heading p{
+  font-size: 1.375rem;
+  line-height: 28px;
+  color: #fff;
+}
+
+.tyn-streamPoint-title{
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  --streamPoint-title-color: #3c4043;
+  color: var(--streamPoint-title-color);
+  margin: 0;
+}
+[data-bs-theme=dark] .tyn-streamPoint-title{
+  --streamPoint-title-color: #e5e5e6;
+}
+
+.tyn-streamPoint-date{
+  --streamPoint-date-color: #5f6368;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+  color: var(--streamPoint-date-color);
+}
+[data-bs-theme=dark] .tyn-streamPoint-date{
+  --streamPoint-date-color: #989898;
+}
+
+
+.tyn-streamPoint,
+.tyn-classroom-streamPoint{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.8rem;
+  border: .0625rem solid #dadce0;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+}
+[data-bs-theme=dark] .tyn-streamPoint,
+[data-bs-theme=dark] .tyn-classroom-streamPoint{
+  background-color: var(--aside-item-active-bg);
+}
+
+.tyn-streamPoint:hover{
+  background-color: var(--aside-item-active-bg);
+}
+[data-bs-theme=dark] .tyn-streamPoint:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tyn-steamPoint-icon{
+  background-color: rgb(66,133,244);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tyn-class-streamPoint-submission,
+.tyn-class-privateCommentSection{
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15);
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  padding: 15px 24px;
+  background-color: var(--aside-item-active-bg);
+}
+[data-bs-theme=dark] .tyn-class-streamPoint-submission,
+[data-bs-theme=dark] .tyn-class-privateCommentSection{
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3), 0 2px 6px 2px rgba(0, 0, 0, .15);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tyn-work-heading{
+  --tyn-work-heading-color: #3c4043;
+  color: var(--tyn-work-heading-color);
+  font-size: 1.2rem;
+  line-height: 28px;
+  font-weight: 300;
+}
+[data-bs-theme=dark] .tyn-work-heading{
+  --tyn-work-heading-color: #fff;
+}
+
+.tyn-class-submission-remain{
+  color: #2e7d32;
+}
+
+.tyn-submission-status{
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.tyn-submitBtn{
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 15px 0 11px;
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid rgb(218, 220, 224);
+  width: 100%;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bs-white);
+}
+[data-bs-theme=dark] .tyn-submitBtn{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.tyn-submitBtn:hover{
+  background-color: rgba(255, 255, 255, 0.6);
+}
+[data-bs-theme=dark] .tyn-submitBtn:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.tyn-submitBtn svg{
+  margin-right: 5px;
+}
+
+.tyn-boldText{
+  --bold-text-color: #3c4043;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--bold-text-color);
+  font-weight: 500;
+}
+[data-bs-theme=dark] .tyn-boldText{
+  --bold-text-color: #fff;
+}
+
+#privateComment,
+#publicComment{
+  width: 85%;
+  padding: .475rem 1rem;
+  font-size: 12px;
+  border-radius: 1rem;
+  border: .0625rem solid rgb(218, 220, 224);
+}
+[data-bs-theme=dark] #privateComment,
+[data-bs-theme=dark] #publicComment{
+  background-color: transparent;
+}
+
+#publicComment{
+  width: 95%;
+}
+
+.privateCommentBtn,
+.publicCommentBtn{
+  border: none;
+  background-color: transparent;
+}
+
+.tyn-class-streamPoint-workDetail p,
+  .tyn-class-streamPoint-ScoreDate p{
+  --detail-text-color: #3c4043;
+  color: var(--detail-text-color);
+  font-size: 0.875rem;
+  line-height: 22px;
+}
+
+[data-bs-theme=dark] .tyn-class-streamPoint-workDetail p,
+[data-bs-theme=dark] .tyn-class-streamPoint-ScoreDate p{
+  --detail-text-color: rgba(255,255,255,0.8);
+}
+
+.tyn-class-streamPoint-ScoreDate p{
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.tyn-class-streamPoint-ScoreDate{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  margin-bottom: 2rem;
+}
+[data-bs-theme=dark] .tyn-class-streamPoint-ScoreDate{
+  border-color: #fff;
+}
+
+.tyn-class-streamPoint-heading p{
+  --detail-heading-text-color: #5f6368;
+  font-size: 0.875rem;
+  color: var(--detail-heading-text-color);
+}
+
+.tyn-class-publicCommentSection{
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+}
+[data-bs-theme=dark] .tyn-class-publicCommentSection{
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.tyn-class-streamPoint-details{
+  padding-left: 3rem;
+}
+
+
+.tyn-create-btn{
+  box-shadow: 0 1px 2px 0 rgba(32, 33, 36, .3), 0 2px 6px 2px rgba(32, 33, 36, .15);
+  height: 3rem;
+  margin: 0;
+  padding: 1.25rem;
+  border-radius: 99px;
+  background-color: var(--aside-item-active-bg);
+}
+[data-bs-theme=dark] .tyn-create-btn{
+  background-color: rgba(0, 0, 0, .3);
+  color: #fff;
+}
+.scrollable{
+  overflow: auto;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 7px;
+}
+.scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+
+.tyn-bold-fs-14{
+  font-size: 0.875rem;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+
+.tyn-fs-14{
+  font-size: 0.875rem;
+  line-height: 22px;
+}
+
+.tyn-label-font{
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.tyn-class-created-streamPoint{
+  padding-top: 4rem;
+  --tyn-border-top: rgba(0,0,0,0.7);
+  border-top: 1px solid var(--tyn-border-top);
+  margin-top: 3rem;
+}
+[data-bs-theme=dark] .tyn-class-created-streamPoint{
+  --tyn-border-top: rgba(255,255,255,0.7);
+}
+
+
+#editor-container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: var(--aside-item-active-bg);
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+#toolbar {
+  margin-bottom: 10px;
+}
+
+#toolbar button {
+  padding: 5px;
+  margin: 0 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#toolbar button.active{
+  background-color: rgba(0, 0, 0, .15);
+}
+
+#editor {
+  min-height: 200px;
+  outline: none;
+  padding: 10px;
+}
+
+#editor strong {
+  font-weight: bold;
+}
+
+#editor em {
+  font-style: italic;
+}
+
+#editor u {
+  text-decoration: underline;
+}
+
+#editor li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.tyn-rounded-border{
+  background-color: #fff;
+  border: .0625rem solid #dadce0;
+  border-radius: .5rem;
+  padding: 1.5rem;
+}
+[data-bs-theme=dark] .tyn-rounded-border{
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+.bg-active,
+.bg-active:focus{
+  background-color: var(--aside-item-active-bg);
+  border: none;
+}
+
+.dropzone {
+  width: 400px;
+  height: 200px;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 auto;
+  position: relative;
+}
+
+.dropzone__text {
+  color: #aaa;
+  font-size: 18px;
+  text-align: center;
+}
+
+.dropzone:hover {
+  border-color: #999;
+}
+
+.dropzone.drag-over {
+  border-color: #333;
+}
+
+#fileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.custom-btn:hover{
+  background-color: var(--aside-item-active-bg);
+}
+[data-bs-theme=dark] .custom-btn:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.tyn-inviteBtn,
+.tyn-selectedDelBtn{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.tyn-inviteBtn:hover,
+.tyn-selectedDelBtn:hover{
+  background-color: var(--aside-item-active-bg);
+}
+
+.tyn-people-section-tool{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.rounded-image{
+  border-radius: 50%;
+  width: 35px;
+  overflow: hidden;
+}
+
+.tyn-fs-13{
+  font-size: 13px;
+}
+
+.tyn-fs-18{
+  font-size: 18px;
+}
+
+.tyn-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  width: 100%;
+}
+.tyn-info:hover{
+  background-color: var(--aside-item-active-bg);
+}
+[data-bs-theme=dark] .tyn-info:hover{
+  background-color: rgba(0, 0, 0, .35);
+}
+.tyn-info p{
+  margin: 0;
+}
+
+.tyn-marksPortion{
+  border-left: 1px solid #fff;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#submittedToggle span.active i,
+#pendingToggle span.active i{
+  transform:  rotate(90deg);
+}
+
+.tyn-right-border{
+  border-right: 1px solid #fff;
+  height: 72vh;
+  overflow: auto;
+}
+.tyn-lighter-heading{
+  color: rgba(0, 0, 0, 0.7);
+}
+
+[data-bs-theme=dark] .tyn-lighter-heading{
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.rounded-item{
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+
 
 /*! END */
