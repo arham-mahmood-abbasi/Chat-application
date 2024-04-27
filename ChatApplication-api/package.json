@@ -1,0 +1,28 @@
+{
+  "name": "chatapplication-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arham-mahmood-abbasi/Chat-application.git"
+  },
+  "author": "Arham Mahmood Abbasi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arham-mahmood-abbasi/Chat-application/issues"
+  },
+  "homepage": "https://github.com/arham-mahmood-abbasi/Chat-application#readme",
+  "dependencies": {
+    "cloudinary": "^2.2.0",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.0"
+  }
+}
