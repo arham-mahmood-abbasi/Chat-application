@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 // const User=require('./user')
-const Assignment=require('./assignment')
 
 const submissionSchema = mongoose.Schema({
     assignmentId:{
@@ -13,7 +12,6 @@ const submissionSchema = mongoose.Schema({
     required:true,
     ref: 'User'
     },
-    submissionDate: {type: Date,required: true,},
     submissionFile:{type: String,required: true,},
 },{timestamps:true});
 

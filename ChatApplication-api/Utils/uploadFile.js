@@ -1,31 +1,40 @@
-const cloudinary = require('cloudinary').v2;
 const Submission = require('../models/submissions'); // Assuming this is your Submission model
+const multer = require('multer');
 
-// Configure Cloudinary
-cloudinary.config({
-  cloud_name: 'dhptugemw',
-  api_key: '817194734144296',
-  api_secret: '1piTjglR5jobighJv5x6ray1S3Y'
+// Multer configuration
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    // Specify the destination where files will be stored
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb) {
+    // Generate unique file name
+    cb(null, Date.now() + '-' + file.originalname);
+  }
 });
 
+// Function to upload a file using Multer
 async function uploadFile(file, assignmentId, studentId) {
+  // Initialize Multer with the configured options
+  const upload = multer({ storage: storage }).single('file');
   try {
-    // Upload file to Cloudinary
-    const result = await cloudinary.uploader.upload(file.path);
-
     // Save file URL in submissions table
     const newSubmission = new Submission({
       assignmentId: assignmentId,
       studentId: studentId,
-      fileUrl: result.secure_url
+      fileUrl: upload.file.path
     });
     await newSubmission.save();
 
     // Return the uploaded file URL
-    return result.secure_url;
+    return upload.file.path;
   } catch (error) {
     throw new Error('An error occurred while uploading the file');
   }
-}
+
+  
+};
 
 module.exports = uploadFile;
+
+

@@ -1,6 +1,13 @@
+// Inside fileUploadRouter.js
+
 const express = require('express');
 const router = express.Router();
-const fileUploadController = require('../Controller/fileUpload');
 
-router.post('/upload',fileUploadController.handleFileUpload);
-module.exports=router;
+// Import your controller function
+const { handleFileUpload } = require('../Controller/fileUpload');
+
+// Define route using multer middleware
+module.exports = function(upload) {
+    router.post('/upload', upload.single('file'), handleFileUpload);
+    return router;
+};
