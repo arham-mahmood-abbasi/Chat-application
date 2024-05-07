@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.ico">
-    <title>Register | ConnectMe | Chat Application HTML Template</title>
+    <title>Verification | ConnectMe | Chat Application HTML Template</title>
     <link rel="stylesheet" href="./assets/css/bundle.css?v131">
     <link rel="stylesheet" href="./assets/css/app.css?v131">
 </head>
@@ -28,49 +28,27 @@
                         </div>
                         <div class="card border-0">
                             <div class="p-4">
-                                <h3>Create Account</h3>
+                                <h3>Verify Account to Activate</h3>
                                 <div class="row g-3 gx-4">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-12">
+                                        <div class="qrImage-div">
+                                            <label class="d-block">Scan QR Code with Authenticator</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label class="form-label" for="username">Your Name</label>
+                                            <label class="form-label" for="repeat-password">Verification Code:</label>
                                             <div class="form-control-wrap">
-                                                <input type="text" class="form-control" id="username" placeholder="yourname">
+                                                <input type="password" class="form-control" id="verification-code" placeholder="Put Verification Code Here ...">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label class="form-label" for="email-address">Email Address</label>
-                                            <div class="form-control-wrap">
-                                                <input type="text" class="form-control" id="email-address" placeholder="youremail@example.com">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label class="form-label" for="password">Password</label>
-                                            <div class="form-control-wrap">
-                                                <input type="password" class="form-control" id="password" placeholder="password">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label class="form-label" for="repeat-password">Password Repeat</label>
-                                            <div class="form-control-wrap">
-                                                <input type="password" class="form-control" id="repeat-password" placeholder="password again">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="register-btn btn btn-primary w-100" href="index.html">Account Register</button>
+                                    <div class="col-sm-12">
+                                        <button class="verify-btn btn btn-primary w-100">Verify</button>
                                     </div>
                                 </div><!-- .row -->
                             </div>
                         </div><!-- .card -->
-                        <div class="text-center mt-4">
-                            <p class="small">Already have an account? <a href="login.html">Login</a></p>
-                        </div>
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container -->
@@ -89,8 +67,9 @@
     </div>
     <script src="./assets/js/bundle.js?v131"></script>
     <script src="./assets/js/app.js?v131"></script>
-    <script src="./assets/js/credential.js"></script>
+    <script src="./assets/js/verification.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 
 </html>
